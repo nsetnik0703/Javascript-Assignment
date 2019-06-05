@@ -1,17 +1,27 @@
 // from data.js
 var tableData = data;
-// YOUR CODE HERE!
+var tbody = d3.select("tbody");
+
+
+console.log(tableData);
+
+tableData.forEach((dataRow) => {
+    var row = tbody.append("tr");
+    Object.values(dataRow).forEach((val) => {
+      var cell = row.append("td");
+        cell.text(val);
+    } )});
+
+var date = d3.select("#datetime").property("value");
+// var dateInput = d3.select("#placeholde").property("value");
+
+// var filterByDate = tableData.filter(function(date)) {
+//     return date == 
+// }
 
 
 
 
-
-// var data = [{
-//     datetime: "1/1/2010",
-//     city: "benton",
-//     state: "ar",
-//     country: "us",
-//     shape: "circle",
-//     durationMinutes: "5 mins.",
-//     comments: "4 bright green circles high in the sky going in circles then one bright green light at my front door."
-//   },
+// var marvelHeroes =  heroes.filter(function(hero) {
+// 	return hero.franchise == “Marvel”;
+// });
